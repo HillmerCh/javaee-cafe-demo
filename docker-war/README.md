@@ -19,6 +19,7 @@ The following is how you run the demo.
 	
 * Edit the file src/main/webapp/WEB-INF/glassfish-resources.xml with the Database connection parameters
 
+
 	```
 	<property name="URL" value="jdbc:oracle:thin:@//<MY_ORACLE_CLOUD_CONNECT_STRING>"/>
 	<property name="User" value="<MY_DABATASE_USER>"/>
@@ -34,7 +35,7 @@ The following is how you run the demo.
 * 	Copy the .war file with maven 
 
 	```bash
-	cp  ../target/javaee-cafe.war .
+	cp  ../javaee-app/target/javaee-cafe-demo.war .
 	```
 
 * Build a Docker image tagged `javaee-cafe-demo` issuing the command:
@@ -42,7 +43,7 @@ The following is how you run the demo.
 	```bash
 	docker build -t javaee-cafe-demo .
 	```
-	```
+
 *  Run the newly built image with the command:
 
 	```
