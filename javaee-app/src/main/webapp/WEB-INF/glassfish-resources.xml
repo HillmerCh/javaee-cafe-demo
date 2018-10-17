@@ -39,22 +39,4 @@
         <description>OCS DataSource</description>
     </jdbc-resource>
 
-    <!--
-    <jdbc-resource pool-name="java:app/jdbc/DemoJavaPool" description="Test DataSource" jndi-name="java:app/JavaOnOracleCloudDS"></jdbc-resource>
-
-
-    <resources>
-        <jdbc-connection-pool datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" name="java:app/jdbc/DemoJavaPool" wrap-jdbc-objects="false" sql-trace-listeners="" conne
-                              ction-validation-method="auto-commit" res-type="javax.sql.DataSource">
-            <property name="URL" value="jdbc:oracle:thin:@//129.150.76.64:1521/PDB1.607396123.oraclecloud.internal"></property>
-            <property name="Password" value="DJ123_"></property>
-            <property name="User" value="DEMO_JAVA"></property>
-        </jdbc-connection-pool>
-        <jdbc-resource pool-name="java:app/jdbc/DemoJavaPool" description="Test DataSource" jndi-name="java:app/JavaOnOracleCloudDS"></jdbc-resource>
-    </resources>
-
-    <jdbc-resource pool-name="H2Pool" jndi-name="jdbc/JavaOnOracleCloudDS"></jdbc-resource>
-    -->
-
-
 </resources>
