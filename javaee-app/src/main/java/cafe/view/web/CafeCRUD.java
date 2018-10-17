@@ -1,4 +1,4 @@
-package cafe.web;
+package cafe.view.web;
 
 import cafe.model.ejb.CafeEJBBean;
 import cafe.model.entity.Coffee;
@@ -56,6 +56,7 @@ public class CafeCRUD implements Serializable {
 			baseUri = FacesContext.getCurrentInstance().getExternalContext().getRequestScheme()+"://"+inetAddress.getHostName() + ":" +
 					FacesContext.getCurrentInstance().getExternalContext().getRequestServerPort() + "/javaee-cafe/webapi/cafeRS";
 
+			System.out.println("baseUri : " + baseUri);
 
 			this.client = ClientBuilder.newClient();
 			this.getAllCoffees();
@@ -70,6 +71,7 @@ public class CafeCRUD implements Serializable {
 		this.coffeeList = this.client.target( this.baseUri )
 				.path( "/all" )
 				.request( MediaType.APPLICATION_XML )
+				.header("User-Test", "James Gosling")
 				.get( new GenericType<List<Coffee>>() {
 				} );
 	}

@@ -24,6 +24,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+
 /**
  * REST Web Service
  *
@@ -53,9 +54,11 @@ public class CafeResource {
 	@GET
 	@Path("all")
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-	public List<Coffee> getAllCoffees() {
+
+	public List<Coffee> getAllCoffees(@javax.ws.rs.HeaderParam("User-Test")  String theUserAgent) {
 		List<Coffee> coffeeList = null;
 		try {
+			System.out.println("theUserAgent : " + theUserAgent);
 			coffeeList = this.cafeEJBBean.getAllCoffees();
 			if (coffeeList == null) {
 				throw new WebApplicationException(Response.Status.NOT_FOUND);
