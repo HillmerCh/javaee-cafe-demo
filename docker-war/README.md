@@ -51,4 +51,9 @@ The following is how you run the demo.
 	```
 	
 * Wait for Payara Server to start and the application to deploy sucessfully (to stop the application and Payara, simply press Control-C).
+ 
+
 * Once the application starts, you can test the REST service at the URL: [http://localhost:8080/javaee-cafe/rest/coffees](http://localhost:8080/javaee-cafe/rest/coffees) or via the JSF client at [http://localhost:9080/javaee-cafe/index.xhtml](http://localhost:9080/javaee-cafe/index.xhtml).
+
+
+Open Web Preview on Port 8080 to test

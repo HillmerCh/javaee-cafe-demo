@@ -55,10 +55,9 @@ public class CafeResource {
 	@Path("all")
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 
-	public List<Coffee> getAllCoffees(@javax.ws.rs.HeaderParam("User-Test")  String theUserAgent) {
+	public List<Coffee> getAllCoffees() {
 		List<Coffee> coffeeList = null;
 		try {
-			System.out.println("theUserAgent : " + theUserAgent);
 			coffeeList = this.cafeEJBBean.getAllCoffees();
 			if (coffeeList == null) {
 				throw new WebApplicationException(Response.Status.NOT_FOUND);

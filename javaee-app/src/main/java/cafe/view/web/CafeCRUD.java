@@ -54,7 +54,7 @@ public class CafeCRUD implements Serializable {
 			InetAddress inetAddress = InetAddress.getByName(((HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest()).getServerName());
 
 			baseUri = FacesContext.getCurrentInstance().getExternalContext().getRequestScheme()+"://"+inetAddress.getHostName() + ":" +
-					FacesContext.getCurrentInstance().getExternalContext().getRequestServerPort() + "/javaee-cafe/webapi/cafeRS";
+					FacesContext.getCurrentInstance().getExternalContext().getRequestServerPort() + "/javaee-cafe-demo/webapi/cafeRS";
 
 			System.out.println("baseUri : " + baseUri);
 
@@ -70,8 +70,6 @@ public class CafeCRUD implements Serializable {
 	private void getAllCoffees() {
 		this.coffeeList = this.client.target( this.baseUri )
 				.path( "/all" )
-				.request( MediaType.APPLICATION_XML )
-				.header("User-Test", "James Gosling")
 				.get( new GenericType<List<Coffee>>() {
 				} );
 	}
