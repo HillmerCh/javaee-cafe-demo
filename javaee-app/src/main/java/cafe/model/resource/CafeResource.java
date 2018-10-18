@@ -54,7 +54,6 @@ public class CafeResource {
 	@GET
 	@Path("all")
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-
 	public List<Coffee> getAllCoffees() {
 		List<Coffee> coffeeList = null;
 		try {

@@ -29,7 +29,7 @@ The following is how you run the demo.
 * 	Generate the .war file with maven  
 
 	```bash
-	mvn clean package
+	mvn clean package --file ../javaee-app/pom.xml 
 	```
 
 * 	Copy the .war file with maven 
@@ -47,7 +47,7 @@ The following is how you run the demo.
 *  Run the newly built image with the command:
 
 	```
-	docker run -it --rm  --name javaee-demo -p 8080:8080 -p 4848:4848 javaee-cafe-demo
+	docker run -it --rm  --name javaee-cafe-demo -p 8080:8080 -p 4848:4848 javaee-cafe-demo
 	```
 	
 * Wait for Payara Server to start and the application to deploy sucessfully (to stop the application and Payara, simply press Control-C).

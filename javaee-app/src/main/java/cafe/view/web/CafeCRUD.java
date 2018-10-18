@@ -70,6 +70,7 @@ public class CafeCRUD implements Serializable {
 	private void getAllCoffees() {
 		this.coffeeList = this.client.target( this.baseUri )
 				.path( "/all" )
+				.request( MediaType.APPLICATION_XML )
 				.get( new GenericType<List<Coffee>>() {
 				} );
 	}
